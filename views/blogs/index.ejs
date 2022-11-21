@@ -4,19 +4,30 @@
 <body>
   <%- include("../partials/nav.ejs") %>
 
-  <div class="blogs content">
-    <h2>All Blogs</h2>
+  <div class="blogs content container d-flex flex-column gap-3 pt-5 pb-5">
+    <h2 class="pb-5">Tout Les Jeux Recherchés</h2>
 
     <% if (blogs.length > 0) { %>
       <% blogs.forEach(blog => { %>
-        <div class="single">
+        <div class="card">
+          <h5 class="card-header">Jeux: <%= blog.title %></h5>
+          <div class="card-body">
+            <h5 class="card-title">console: <%= blog.snippet %></h5>
+            <p class="card-text">Prix maximum qu'il l'achèterais: <h5><%= blog.price %>$</h5></p>
+            <!-- <p class="card-text">détails supplémentaires: <%= blog.body %>$</p> -->
+            <a href="/blogs/<%= blog._id %>" class="btn btn-primary">Contacter Cette Acheteur</a>
+          </div>
+        </div>
+
+
+        <!-- <div class="single">
           <h3 class="title">Jeux: <b><%= blog.title %></b></h3>
           <p class="snippet">Console: <b><%= blog.snippet %></b></p>
           <p class="price snippet">Prix Maximum qu'il l'achèterais: <b><%= blog.price %>$</b></p>
           <div class="wrapper">
             <a href="/blogs/<%= blog._id %>">Contacter Ce Collectionneur</a>
           </div>
-        </div>
+        </div> -->
       <% }) %>
     <% } else { %>
       <p>There are no blogs to display...</p>

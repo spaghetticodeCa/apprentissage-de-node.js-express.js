@@ -4,14 +4,31 @@
 <body>
   <%- include("../partials/nav.ejs") %>
 
-  <div class="details content">
-    <h2><%= blog.title %></h2>
+  <div class="details content container pb-5 pt-5">
+    
+    <div class="card">
+      <h5 class="card-header">Jeux: <%= blog.title %></h5>
+      <div class="card-body">
+        <h5 class="card-title">console: <%= blog.snippet %></h5>
+        <p class="card-text">Prix maximum qu'il l'achèterais: <h5><%= blog.price %>$</h5></p>
+        <p class="card-text">informations supplémentaires: <h5><%= blog.body %>$</h5></p>
+        <a href="mailto:<%= blog.email %>" class="btn btn-primary">courriel: <%= blog.email %></a>
+        <p class="form-text">clique sur ce bouton pour lui envoyer directement un courriel de ta proposition</p>
+        <!-- <p class="card-text">détails supplémentaires: <%= blog.body %>$</p> -->
+        <!-- <a class="delete" data-doc="<%= blog._id %>">Supprimer</a>  -->
+
+      </div>
+    </div>
+
+
+    <!-- <h2>nom du jeux: <%= blog.title %></h2>
     <div class="content">
       <p><%= blog.price %>$</p>
       <p><%= blog.body %></p>
+      <a href="mailto:<%= blog.email %>"><%= blog.email %></a>
     </div>
-    <a class="delete" data-doc="<%= blog._id %>">Supprimer</a>
-  </div>
+     <a class="delete" data-doc="<%= blog._id %>">Supprimer</a> 
+  </div> -->
 
   <%- include("../partials/footer.ejs") %>
 

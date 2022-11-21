@@ -4,8 +4,38 @@
 <body>
   <%- include("../partials/nav.ejs") %>
 
-  <div class="create-blog content">
+  <div class="create-blog content container pt-5 pb-5">
+
     <form action="/blogs" method="POST">
+      <div class="mb-3">
+        <label for="title" class="form-label">Nom du jeux:</label>
+        <input type="text" class="form-control" id="title" name="title">
+      </div>
+      <div class="mb-3">
+        <label for="snippet" class="form-label">Sur quel console: </label>
+        <input type="text" class="form-control" id="snippet" name="snippet">
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">Prix Maximum que j'achèterais ce jeux </label>
+        <input type="text" class="form-control" id="price" name="price">
+      </div>
+      <div class="mb-3">
+        <label for="body" class="form-label">Informations supplémentaires:</label>
+        <textarea  type="text" class="form-control" id="body" name="body" rows="3"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Courriel</label>
+        <input type="email" name="email" required class="form-control" id="email" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">c'est avec ce courriel qu'un revendeur de jeux vous contactera</div>
+      </div>
+
+
+      <button type="submit" class="btn btn-primary">Envoyer la demande</button>
+    </form>
+
+
+    <!-- <form action="/blogs" method="POST">
       <label for="title">Nom Du Jeux:</label>
       <input type="text" id="title" name="title" required>
       <label for="snippet">Console:</label>
@@ -15,7 +45,7 @@
       <label for="body">Informations supplémentaires</label>
       <textarea id="body" name="body" required></textarea>
       <button>Envoyer</button>
-    </form>
+    </form> -->
   </div>
 
   <%- include("../partials/footer.ejs") %>
