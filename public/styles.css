@@ -30,9 +30,10 @@
     nav li{
       list-style-type: none;
       margin-left: 20px;
+      font-size: 1rem;
     }
     nav h1{
-      font-size: 3em;
+      font-size: 1.5em;
     }
     nav p, nav a{
       color: #777;
@@ -55,11 +56,26 @@
     }
 
     /* index styles */
+
+    .single{
+      margin: 1.5rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
     .blogs a{
-      display: block;
+      /* display: block;
       margin: 40px 0;
       padding-left: 30px;
-      border-left: 6px solid crimson;
+      border-left: 6px solid crimson; */
+      margin-top: 20px;
+      background: crimson;
+      color: white;
+      padding: 6px;
+      border: 0;
+      font-size: 1.2em;
+      cursor: pointer;
     }
     .blogs a:hover h3{
       color: crimson;

@@ -1,0 +1,23 @@
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+
+<body>
+  <%- include("../partials/nav.ejs") %>
+
+  <div class="create-blog content">
+    <form action="/blogs" method="POST">
+      <label for="title">Nom Du Jeux:</label>
+      <input type="text" id="title" name="title" required>
+      <label for="snippet">Console:</label>
+      <input type="text" id="snippet" name="snippet" required>
+      <label for="price">Prix Maximum que j'achèterais ce jeux</label>
+      <input type="text" id="price" name="price" required>
+      <label for="body">Informations supplémentaires</label>
+      <textarea id="body" name="body" required></textarea>
+      <button>Envoyer</button>
+    </form>
+  </div>
+
+  <%- include("../partials/footer.ejs") %>
+</body>
+</html>
