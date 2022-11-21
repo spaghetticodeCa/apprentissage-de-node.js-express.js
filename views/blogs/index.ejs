@@ -10,7 +10,10 @@
     <% if (blogs.length > 0) { %>
       <% blogs.forEach(blog => { %>
         <div class="card">
-          <h5 class="card-header">Jeux: <%= blog.title %></h5>
+          <div class="card-header d-flex justify-content-between">
+            <h5 >Jeux: <%= blog.title %> </h5>
+            <p><%= blog.createdAt.toDateString() %></p>
+          </div>
           <div class="card-body">
             <h5 class="card-title">console: <%= blog.snippet %></h5>
             <p class="card-text">Prix maximum qu'il l'achèterais: <h5><%= blog.price %>$</h5></p>
@@ -19,7 +22,7 @@
           </div>
         </div>
 
-
+        
         <!-- <div class="single">
           <h3 class="title">Jeux: <b><%= blog.title %></b></h3>
           <p class="snippet">Console: <b><%= blog.snippet %></b></p>
